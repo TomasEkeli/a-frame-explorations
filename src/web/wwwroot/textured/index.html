@@ -13,8 +13,18 @@
                 crossorigin="anonymous"
             />
             <img
+                id="grid-normal"
+                src="/textures/grid-normal.png"
+                crossorigin="anonymous"
+            />
+            <img
                 id="earth"
-                src="/textures/earth.png"
+                src="/textures/earth.jpg"
+                crossorigin="anonymous"
+            />
+            <img
+                id="earth-normal"
+                src="/textures/earth-normal.jpg"
                 crossorigin="anonymous"
             />
             <img
@@ -56,6 +66,7 @@
             radius-tubular="0.1"
             position="-2.5 1.5 -4"
             color="maroon"
+            material="color: maroon; roughness: 0.28; metalness: 0.6;"
             shadow="cast: true; receive: true"
         ></a-torus-knot>
         <a-box
@@ -69,14 +80,16 @@
             material="normalMap: #tetris-normal;"
             shadow="cast: true; receive: true"
         ></a-box>
+
         <a-sphere
-            id="ball"
+            id="earth"
             position="0 1.5 -5"
             radius="1.25"
             rotation="0 -65 -17"
-            material="src: #earth"
+            material="src: #earth; normalMap: #earth-normal; normalScale: -1.95 -2.79"
             shadow="cast: true; receive: true"
         ></a-sphere>
+
         <a-cylinder
             id="cylinder"
             radius="0.5"
@@ -105,7 +118,7 @@
             position="2 3 -4"
             rotation="30 -20 0"
             color="purple"
-            material="src: #grid; repeat: 16 5"
+            material="src: #grid; repeat: 16 5; normalMap: #grid-normal; normalScale: 1.6 0.5;"
             shadow="cast: true; receive: true"
         >
         </a-torus>
