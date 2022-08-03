@@ -1,14 +1,112 @@
 <html>
-    <head>
-    <script src='https://aframe.io/releases/1.3.0/aframe.min.js'></script>
-    </head>
-    <body>
-        <a-scene render="antialias: true">
-            <a-box position='-1 0.5 -3' rotation='0 45 0' color='#4CC3D9'></a-box>
-            <a-sphere position='0 1.25 -5' radius='1.25' color='#EF2D5E'></a-sphere>
-            <a-cylinder position='1 0.75 -3' radius='0.5' height='1.5' color='#FFC65D'></a-cylinder>
-            <a-plane position='0 0 -4' rotation='-90 0 0' width='4' height='4' color='#7BC8A4'></a-plane>
-            <a-sky color='#ECECEC'></a-sky>
-        </a-scene>
-    </body>
+
+<head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene
+        render="antialias: true"
+    >
+        <a-entity
+            id="fill-light"
+            light="type: ambient; color: gray"
+        >
+        </a-entity>
+        <a-entity id="directional-light" light="color: white; castShadow: true; shadowCameraVisible: false; shadowCameraFar: 20; shadowCameraLeft: -6.7; shadowCameraRight: 0; shadowCameraTop: 5.13; shadowCameraBottom: -3.47" position="-1 4 0">
+        </a-entity>
+
+        <a-sky
+            id="sky"
+            color="#001337"
+        ></a-sky>
+        <a-plane
+            id="ground"
+            position="0 0 0"
+            rotation="-90 0 0"
+            width="100"
+            height="100"
+            color="gray"
+            shadow="cast: false; receive: true"
+        ></a-plane>
+        <a-torus-knot
+            id="knot"
+            p="2"
+            q="3"
+            radius="0.5"
+            radius-tubular="0.1"
+            position="-2.5 1.5 -4"
+            color="maroon"
+            shadow="cast: true; receive: true"
+        ></a-torus-knot>
+        <a-box
+            id="box"
+            width="1.5"
+            height="1"
+            depth="1"
+            position="-1 0.5 -3"
+            rotation="0 45 0"
+            color="orange"
+            shadow="cast: true; receive: true"
+        ></a-box>
+        <a-sphere
+            id="ball"
+            position="0 1.5 -5"
+            radius="1.25"
+            color="turquoise"
+            shadow="cast: true; receive: true"
+        ></a-sphere>
+        <a-cylinder
+            id="cylinder"
+            radius="0.5"
+            height="1.5"
+            position="1 0.75 -3"
+            color="green"
+            shadow="cast: true; receive: true"
+        >
+        </a-cylinder>
+        <a-cone
+            id="cone"
+            radius-bottom="1"
+            radius-top="0"
+            height="2"
+            position="3 1 -4"
+            color="blue"
+            shadow="cast: true; receive: true"
+        >
+        </a-cone>
+
+        <a-torus
+            id="torus"
+            radius="0.5"
+            radius-tubular="0.1"
+            position="2 3 -4"
+            rotation="30 -20 0"
+            color="purple"
+            shadow="cast: true; receive: true"
+        >
+        </a-torus>
+        <a-dodecahedron
+            id="d12"
+            radius="0.5"
+            position="0 3 -3"
+            rotation="30 -20 0"
+            color="#311337"
+            shadow="cast: true; receive: true"
+        >
+        </a-dodecahedron>
+
+        <a-icosahedron
+            id="d20"
+            radius="0.5"
+            position="-2 3 -3"
+            rotation="30 -20 0"
+            color="#c0ffee"
+            shadow="cast: true; receive: true"
+        >
+        </a-icosahedron>
+
+    </a-scene>
+</body>
+
 </html>
