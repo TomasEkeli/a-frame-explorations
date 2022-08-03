@@ -28,8 +28,8 @@
                 crossorigin="anonymous"
             />
             <img
-                id="tetris-normal"
-                src="/textures/tetris-normal.jpg"
+                id="circle-grid-normal"
+                src="/textures/circle_grid_normal_map_by_stanpancakes.jpg"
                 crossorigin="anonymous"
             />
         </a-assets>
@@ -58,6 +58,7 @@
             color="gray"
             shadow="cast: false; receive: true"
         ></a-plane>
+
         <a-torus-knot
             id="knot"
             p="2"
@@ -69,6 +70,7 @@
             material="color: maroon; roughness: 0.28; metalness: 0.6;"
             shadow="cast: true; receive: true"
         ></a-torus-knot>
+
         <a-box
             id="box"
             width="1.5"
@@ -77,7 +79,7 @@
             position="-1 0.5 -3"
             rotation="0 45 0"
             color="orange"
-            material="normalMap: #tetris-normal;"
+            material="normalMap: #circle-grid-normal; normalScale: 0 -0.3;"
             shadow="cast: true; receive: true"
         ></a-box>
 
@@ -98,7 +100,6 @@
             color="green"
             shadow="cast: true; receive: true"
         >
-        </a-cylinder>
         </a-cylinder>
         <a-cone
             id="cone"
